@@ -4,7 +4,13 @@
 
 using namespace std;
 
-string Conductivity::ping(string data)
+struct conductivity
+{
+    
+};
+
+
+string Conductivity::read(string data)
 {
     return "ok";
 }

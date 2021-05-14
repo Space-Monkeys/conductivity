@@ -9,7 +9,7 @@ class Conductivity
 {
 private:
 public:
-    string ping(string data);
+    string read(string data);
 };
 
 #endif
