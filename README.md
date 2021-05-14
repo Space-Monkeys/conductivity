@@ -6,33 +6,27 @@ Componente de request, feito com intuito de deixar mais fácil a comunicação v
 
 Basta clonar este repositorio para a pasta [esp]/esp-idf/components
 
-` https://github.com/KelvinyHenrique/mkrequest.git `
+` https://github.com/Space-Monkeys/conductivity.git `
 
 
 # Exemplo
 
 ```c++
 
-  string body = "{\"temperatura\":\"25\"}";
-  string webserver = "httpbin.org";
-  string webpath = "/post";
-  string params = "nome=kelviny&sobrenome=henrique";
-  Requests *request = new Requests();
-  cout << request->get(webserver, webpath, params) << std::endl;
-  cout << request->post(webserver, webpath, params, body) << std::endl;
-  cout << request->put(webserver, webpath, params, body) << std::endl;
-  cout << request->patch(webserver, webpath, params, body) << std::endl;
-  cout << request->del(webserver, webpath, params) << std::endl;
-  cout << request->head(webserver, webpath, params) << std::endl;
+  Conductivity *conductivity = new Conductivity();
+  cout << conductivity->read() << std::endl;
 
 ```
 
 #Repositorio de Exemplo
 
 Basta clonar(Lempre-se de importar a biblioteca executando o passo acima) este repositorio para quaquer pasta
-` https://github.com/KelvinyHenrique/Monkey-Request_Example.git `
-Não esqueça de adicionar as credenciais de sua rede em SDKCONFIG ou então executar idf.py menuconfig e 
-ir em Example Connection Configuration Exaplme > Wifi SSD e Wifi Password
+` https://github.com/Space-Monkeys/conductivity.git `
+
+#BUGFIX
+
+Ao copiar a biblioteca para a pasta /components, caso já tenha algum projeto que você fez o build
+irá precisar apagar a pasta /build do projeto, até então essa foi a solução que achei 😉.
  
 
 ```powershell
