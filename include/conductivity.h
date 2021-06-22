@@ -3,13 +3,14 @@
 #define CONDUCTIVITY_H_
 
 #include <iostream>
+#include <driver/adc.h>
 using namespace std;
 
 class Conductivity
 {
 private:
 public:
-    string read(string data);
+    int read(adc1_channel_t data);
 };
 
 #endif
